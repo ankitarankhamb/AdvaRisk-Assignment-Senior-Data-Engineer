@@ -1,0 +1,4 @@
+customer_id,name,email,country,total_amount_spent,total_orders,average_amount_spent,total_products_ordered,average_rating
+1,Alice Smith,alice@example.com,USA,825.25,2,137.54,6,5
+2,Bob Johnson,bob@example.com,Canada,581.0,2,193.67,2,2
+3,Charlie Brown,charlie@example.com,UK,300.75,1,300.75,0,0
