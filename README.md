@@ -27,28 +27,28 @@ ETL-Project/
 │   ├── load_data_v2.py
 
 
-## Run the Extract Script :  extract_data_v1.py
+1.** Run the Extract Script :  extract_data_v1.py **
 
 This script connects to the source database using the db_connection.py file for database details.
 It extracts the required data, performs data cleaning operations such as dropping duplicates and filling missing values (fillna).
 The cleaned data is then written into the PostgreSQL destination database.
 
-## Note ##
+⚠️ ## Note ##
 Skipping the Staging Step:
 If the data is small and doesn't need to be staged for further requirements, you can skip the staging step entirely. Instead, you can directly extract, transform, and load (ETL) the data into MongoDB. This approach streamlines the process and reduces the time required for data processing.
 This alternative solution is particularly useful for quick, ad-hoc analyses or when you need to load data directly into MongoDB for new requirements without the intermediate step of staging in a database or file. By storing data directly in the destination database, you maintain flexibility to accommodate changing requirements without the extra load of managing a staging environment..
 
-## Run the Transformation Script : transform_data_v1.py
+2. ** Run the Transformation Script : transform_data_v1.py **
 This script retrieves the cleaned data from the PostgreSQL database.
 It applies necessary transformation logic, including calculating averages, counts, and other metrics.
 The script merges data from the five tables into a single transformed table.
 
-## Run the Load Script : load_data_v1.py
+3. ** Run the Load Script : load_data_v1.py **
 This script accesses the transformed data and generates the required insights, such as the top 5 customers by total amount spent, top 5 products by number of orders, average product ratings by category, and the monthly sales trend.
 The aggregated data and insights are then stored in MongoDB.
 The MongoDB setup includes one client and two collections: one for aggregated data and one for insights.
 
-## Alternative Method (Using CSV Files)
+🔵 ## Alternative Method (Using CSV Files)
 In addition to the primary method, there are alternative scripts provided for cases where data is stored in files such as CSV, JSON, or Parquet on an S3 bucket.
 
 By following these steps, you can ensure that the ETL pipeline runs smoothly, extracting, transforming, and loading data while generating valuable insights from the eCommerce data.
