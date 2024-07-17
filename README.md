@@ -2,8 +2,7 @@
 ## Introduction
 Welcome to the ETL Pipeline Project README. This document provides an overview of setting up, running, and understanding the ETL pipeline designed for transforming E-commerce data.
 
-## Follow these steps to run the ETL pipeline for the eCommerce project:
-
+## Project Folder Structure
 ecommerce_etl_pipeline/
 ├── README.md
 ├── dags/
