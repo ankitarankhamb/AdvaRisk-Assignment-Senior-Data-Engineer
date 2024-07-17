@@ -3,16 +3,11 @@
 Welcome to the ETL Pipeline Project README. This document provides an overview of setting up, running, and understanding the ETL pipeline designed for transforming E-commerce data.
 
 ## SQL Database (PostgreSQL)
-
-## Create Database and User:
-Open a terminal and execute the following commands:
-CREATE DATABASE ecommerce_source_db;
-
-## Source Database Connection Details:
+## Source PostgreSQL Database Connection Details:
 Host: localhost
 Port: 5432
-Username: your_username
-Password: your_password
+Username: <your_username>
+Password: <your_password>
 
 ## SQL Database Tables:
 customers: Stores customer information.
@@ -24,8 +19,11 @@ reviews: Holds product reviews by customers.
 
 ## NoSQL Database (MongoDB)
 ## NoSQL Database Collection:
-aggregated_data_collection : Stores aggregated customer.
-insights_data_collection : Stores insights.
+database connection :  mongodb://localhost:27017
+create one client : ecommerce_insights
+craete two collections :
+  1. aggregated_data_collection : Stores aggregated customer.
+  2. insights_data_collection : Stores insights.
 
 ## Running the Pipeline
 ## Using Airflow for Orchestration
