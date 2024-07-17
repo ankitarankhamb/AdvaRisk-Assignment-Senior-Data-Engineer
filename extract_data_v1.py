@@ -39,7 +39,7 @@ def extract_data():
             db_connection_str=get_rds_destination_conn()
             engine = create_engine(db_connection_str)
             df.to_sql(table, con=engine, index=False, if_exists='replace')
-        return df 
+        print("Staging data load completed ")  
     except Exception as e:
         print(f"An error occurred: {e}")
         #Send an email to the development team if the job fails, including the cause of the failure
