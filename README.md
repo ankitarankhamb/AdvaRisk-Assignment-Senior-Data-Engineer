@@ -21,7 +21,7 @@ reviews: Holds product reviews by customers.
 ## NoSQL Database Collection:
 database connection :  mongodb://localhost:27017
 create one client : ecommerce_insights
-craete two collections :
+create two collections :
   1. aggregated_data_collection : Stores aggregated customer.
   2. insights_data_collection : Stores insights.
 
