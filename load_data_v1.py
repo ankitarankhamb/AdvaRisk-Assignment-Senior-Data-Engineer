@@ -5,6 +5,7 @@ import pandas as pd
 from sqlalchemy import create_engine
 from pymongo import MongoClient
 
+# Get current path
 current_path = os.getcwd()
 # Directory where email notification will send if failure
 mail_directory = os.path.join(current_path, "ETL", "email_notifications")
