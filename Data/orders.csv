@@ -1,6 +1,0 @@
-order_id,customer_id,order_date,total_amount,status
-1,1,2024-07-15,150.0,Shipped
-2,2,2024-07-14,200.5,Processing
-3,1,2024-07-13,75.25,Delivered
-4,3,2024-07-12,300.75,Shipped
-5,2,2024-07-11,180.0,Delivered

@@ -1,6 +1,0 @@
-customer_id,name,email,country
-1,Alice Smith,alice@example.com,USA
-2,Bob Johnson,bob@example.com,Canada
-3,Charlie Brown,charlie@example.com,UK
-4,Alice Smith,alice.smith@example.com,USA
-5,David Miller,david@example.com,Australia
