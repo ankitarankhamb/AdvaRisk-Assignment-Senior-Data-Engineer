@@ -13,18 +13,19 @@ ETL-Project/
 ├── database/
 │   ├── db_connection.py
 |   ├── create_table.py
-├── email_notifications/
-│   ├── send_email.py
-├── alternative_scripts/
-│   ├── extract_data_v1.py
-│   ├── transform_data_v1.py
-│   ├── load_data_v1.py
-│   └── sample_data/
+│   └── data/
 │       ├── customers.csv
 │       ├── orders.csv
 │       ├── products.csv
 │       ├── categories.csv
 │       └── reviews.csv
+├── email_notifications/
+│   ├── send_email.py
+├── alternative_scripts/
+│   ├── extract_data_v2.py
+│   ├── transform_data_v2.py
+│   ├── load_data_v2.py
+
 
 ## Run the Extract Script :  extract_data_v1.py
 
