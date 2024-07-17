@@ -41,8 +41,6 @@ Create Docker container for run airflow worker and schedular on  machine:
 Open a web browser and go to http://localhost:8080.
 Navigate to the 'ecommerce_etl_pipeline' DAG and trigger it to start the pipeline.
 
-## Data Models and Time Complexities
-
 ## Data Models Used
 ## SQL Database Tables:
 customers: Stores customer information.
