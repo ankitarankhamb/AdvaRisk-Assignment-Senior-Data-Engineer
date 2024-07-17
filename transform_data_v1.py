@@ -4,6 +4,7 @@ import psycopg2
 import pandas as pd
 from sqlalchemy import create_engine
 
+#Get current path
 current_path = os.getcwd()
 # Directory where email notification will send if failure
 mail_directory = os.path.join(current_path, "ETL", "email_notifications")
@@ -54,7 +55,7 @@ def transform_data():
         db_connection_str=get_rds_destination_conn()
         engine = create_engine(db_connection_str)
         aggregated_df.to_sql('ecommerce_transform_data', con=engine, index=False, if_exists='replace')
-        return aggregated_df 
+        print("Data loaded into PostgreSQL  successfully.")
     except Exception as e:
         print(f"An error occurred: {e}")
         #Send an email to the development team if the job fails, including the cause of the failure
