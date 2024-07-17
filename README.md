@@ -14,7 +14,7 @@ ETL-Project/
 │   ├── db_connection.py
 |   ├── create_table.py
 ├── email_notifications/
-│   ├── mail.py
+│   ├── send_email.py
 ├── alternative_scripts/
 │   ├── extract_data_v1.py
 │   ├── transform_data_v1.py
