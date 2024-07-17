@@ -34,33 +34,39 @@ It extracts the required data, performs data cleaning operations such as droppin
 The cleaned data is then written into the PostgreSQL destination database.
 
 ⚠️ Note
+
 Skipping the Staging Step:
 If the data is small and doesn't need to be staged for further requirements, you can skip the staging step entirely. Instead, you can directly extract, transform, and load (ETL) the data into MongoDB. This approach streamlines the process and reduces the time required for data processing.
 This alternative solution is particularly useful for quick, ad-hoc analyses or when you need to load data directly into MongoDB for new requirements without the intermediate step of staging in a database or file. By storing data directly in the destination database, you maintain flexibility to accommodate changing requirements without the extra load of managing a staging environment..
 
 2.** Run the Transformation Script : transform_data_v1.py **
+
 This script retrieves the cleaned data from the PostgreSQL database.
 It applies necessary transformation logic, including calculating averages, counts, and other metrics.
 The script merges data from the five tables into a single transformed table.
 
 3.** Run the Load Script : load_data_v1.py **
+
 This script accesses the transformed data and generates the required insights, such as the top 5 customers by total amount spent, top 5 products by number of orders, average product ratings by category, and the monthly sales trend.
 The aggregated data and insights are then stored in MongoDB.
 The MongoDB setup includes one client and two collections: one for aggregated data and one for insights.
 
 🔵 Alternative Method (Using CSV Files)
+
 In addition to the primary method, there are alternative scripts provided for cases where data is stored in files such as CSV, JSON, or Parquet on an S3 bucket.
 
 By following these steps, you can ensure that the ETL pipeline runs smoothly, extracting, transforming, and loading data while generating valuable insights from the eCommerce data.
 
 ## SQL Database (PostgreSQL)
 ## Source PostgreSQL Database Connection Details:
+
 Host: localhost
 Port: 5432
 Username: <your_username>
 Password: <your_password>
 
 ## SQL Database Tables:
+
 customers: Stores customer information.
 orders: Contains order details including customer references.
 order_items: Lists items in each order with product references.
@@ -70,9 +76,11 @@ reviews: Holds product reviews by customers.
 
 ## NoSQL Database (MongoDB)
 ## NoSQL Database Collection:
+
 database connection :  mongodb://localhost:27017
 create one client : ecommerce_insights
 create two collections :
+
   1. aggregated_data_collection : Stores aggregated customer.
   2. insights_data_collection : Stores insights.
 
