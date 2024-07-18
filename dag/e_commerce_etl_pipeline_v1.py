@@ -6,7 +6,7 @@ from datetime import datetime, timedelta
 default_args = {
     'owner': 'airflow',
     'depends_on_past': False,
-    'start_date': datetime(2024, 7, 17),
+    'start_date': datetime(2024, 7, 18),
     'email_on_failure': True, #send email notifications on task failures 
     'email_on_retry': False,
     'retries': 3,
@@ -25,19 +25,19 @@ dag = DAG(
 # Define tasks using PythonOperator to run Python scripts
 extract_task = PythonOperator(
     task_id='extract_data',
-    python_callable='python /path/to/extract_data_v1.py',  # Path to your extract script
+    python_callable='python /path/extract_data_v1.py',  # Path to your extract script
     dag=dag,
 )
 
 transform_task = PythonOperator(
     task_id='transform_data',
-    python_callable='python /path/to/transform_data_v1.py',  # Path to your transform script
+    python_callable='python /path/transform_data_v1.py',  # Path to your transform script
     dag=dag,
 )
 
 load_task = PythonOperator(
     task_id='load_data',
-    python_callable='python /path/to/load_data_v1.py',  # Path to your load script
+    python_callable='python /path/load_data_v1.py',  # Path to your load script
     dag=dag,
 )
 
