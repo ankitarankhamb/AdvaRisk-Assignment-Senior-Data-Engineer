@@ -54,6 +54,7 @@ The MongoDB setup includes one client and two collections: one for aggregated da
 🔵 Alternative Method (Using CSV Files)
 
 In addition to the primary method, there are alternative scripts provided for cases where data is stored in files such as CSV, JSON, or Parquet on an S3 bucket.
+In the alternative_script directory, there are extract, transform, and load scripts. These scripts perform all operations on DataFrames and store the results into CSV files.
 
 By following these steps, you can ensure that the ETL pipeline runs smoothly, extracting, transforming, and loading data while generating valuable insights from the eCommerce data.
 
