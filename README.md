@@ -86,7 +86,7 @@ create two collections :
 
 ## Running the Pipeline
 ## Using Airflow for Orchestration
-To run Airflow worker and scheduler on your machine, create a Docker container
+To run Airflow worker and scheduler, use Docker containers.
 
 ## Access Airflow UI:
 Open a web browser and go to http://localhost:8080.
