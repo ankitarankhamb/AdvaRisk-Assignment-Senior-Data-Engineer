@@ -75,7 +75,7 @@ categories: Categorizes products.
 reviews: Holds product reviews by customers.
 
 ## NoSQL Database (MongoDB)
-## NoSQL Database Collection:
+# NoSQL Database Collection:
 
 database connection :  mongodb://localhost:27017
 create one client : ecommerce_insights
@@ -85,27 +85,25 @@ create two collections :
   2. insights_data_collection : Stores insights.
 
 ## Running the Pipeline
-## Using Airflow for Orchestration
+# Using Airflow for Orchestration
 To run Airflow worker and scheduler, use Docker containers.
-
-## Access Airflow UI:
+# Access Airflow UI:
 Open a web browser and go to http://localhost:8080.
-Navigate to the 'ecommerce_etl_pipeline' DAG and trigger it to start the pipeline.
-
+Navigate to the 'E-commerce_etl_pipeline' DAG and trigger it to start the pipeline.
+In that dag there is three task for extract,transform,load which runs every 3 hour in a day .
 
 ## Time Complexities (Big O Notations)
-## SQL Operations:
+# SQL Operations:
 Joins: O(m * n) where m and n are the number of rows in joined tables.
 Aggregations: O(n log n) for group by operations.
 Retrievals: O(n log n) for fetching top N records.
 
-## NoSQL Operations:
+# NoSQL Operations:
 Insertions: O(1) for inserting documents.
 Reads: O(1) for retrieving documents by indexed fields.
 
 ## Data Reconciliation Scripts:
 Automated scripts to reconcile data between SQL and NoSQL databases.
-Scheduled 3 hours jobs to ensure regular updates and consistency checks.
 
 ## Performance Optimization:
 Database indexing for faster query execution.
