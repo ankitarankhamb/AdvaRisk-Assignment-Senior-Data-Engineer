@@ -3,7 +3,7 @@
 Welcome to the ETL Pipeline Project README. This document provides an overview of setting up, running, and understanding the ETL pipeline designed for transforming E-commerce data.
 
 ## Project Folder Structure
-ETL-Project/
+ETL/
 ├── README.md
 ├── dag/
 │   ├── e_commerce_etl_pipeline_v1.py
